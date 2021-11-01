@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Tahoma, "Trebuchet MS", "Times New Roman", Georgia;
+}
+
+body {
+  background-color: #e5e9f0;
+}
+
+header {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e3440;
+  color: #eceff4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header nav button {
+  margin: auto 10px;
+  background-color: #88c0d0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.phrase {
+  background-image: url("https://i.blogs.es/f7b0ed/steve-jobs/1366_2000.jpg");
+  background-size: cover;
+  margin: 10px;
+  width: calc(100% - 20px);
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.phrase div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 20%;
+  background-color: #2e3440;
+  color: #eceff4;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 80%;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav a {
+    margin: 10px 10px;
+  }
+  .phrase {
+    background-size: cover;
+    height: 89vh;
+  }
+}
