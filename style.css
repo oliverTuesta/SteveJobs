@@ -31,11 +31,18 @@ header nav {
   background-color: #bf616a;
 }
 
-header nav a {
+a {
   font-size: 1.2em;
   color: #eceff4;
   font-weight: bold;
   text-decoration: none;
+}
+
+#tribute-link {
+  margin-top: 20px;
+  align-self: flex-start;
+  color: #bf616a;
+  font-size: 1em;
 }
 
 header nav a::after {
@@ -78,7 +85,7 @@ header nav button {
 
 .phrase p {
   color: #2e3440;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
   margin: 0;
   background-color: #eceff4;
@@ -89,8 +96,13 @@ header nav button {
 }
 
 main {
+  width: min-content;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  font-size: 1.2em;
+  align-content: space-around;
+  align-items: flex-start;
+  margin: 30px auto;
 }
 main div {
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.4);
@@ -99,7 +111,7 @@ main div {
 h2 {
   font-size: 2em;
   font-weight: bold;
-  margin: 0;
+  margin: 10px;
   color: #d08770;
   opacity: 100%;
   padding: 10px;
@@ -108,20 +120,23 @@ h2 {
 }
 
 .who-card {
+  height: 997px;
+  width: 700px;
   background-color: #2e3440;
   color: #eceff4;
   display: flex;
   flex-direction: column;
-
+  flex-shrink: 2;
   align-items: center;
   padding: 10px;
   border-radius: 5px;
-  margin: 30px;
-  padding: 30px;
+  padding: 40px;
 }
 
 .achievements-card {
-  height: 100%;
+  width: auto;
+  height: 997px;
+
   background-color: #d8dee9;
   display: flex;
   flex-direction: column;
@@ -129,17 +144,18 @@ h2 {
   align-items: center;
   padding: 40px;
   border-radius: 5px;
-  margin: 30px;
+  flex-shrink: 1;
 }
 
 .achievements-card h2 {
-  font-size: 2em;
+  font-size: 3em;
   color: #bf616a;
 }
 
 li {
   color: #2e3440;
   list-style-type: disc;
+  margin: 10px;
 }
 
 footer {
@@ -158,9 +174,37 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1380px) {
   main {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
+  #img-div {
+    width: calc(100% - 60px);
+  }
+  .who-card {
+    width: 100%;
+    height: auto;
+  }
+  .achievements-card {
+    width: 100%;
+    max-height: 100%;
+    align-items: center;
+  }
+}
+
+#img-div {
+  margin: 30px auto;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+#image {
+  border-radius: 5px;
+}
+
+figcaption {
+  margin: 3px;
 }
