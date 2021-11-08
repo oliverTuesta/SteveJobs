@@ -192,6 +192,12 @@ footer {
     max-height: 100%;
     align-items: center;
   }
+
+  #image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 }
 
 #img-div {
